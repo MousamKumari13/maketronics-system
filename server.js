@@ -31,13 +31,34 @@ function saveData(data) {
 // Classification function
 function classify(text) {
   const lower = text.toLowerCase();
-  if (lower.includes('failed') || lower.includes('overheating') || lower.includes('broken') || lower.includes('error')) {
+  
+  // Check for Issues
+  if (lower.includes('failed') || lower.includes('overheating') || lower.includes('broken') || lower.includes('error') || lower.includes('defect')) {
     return 'Issue';
-  } else if (lower.includes('delay') || lower.includes('shipment')) {
+  }
+  
+  // Check for Events
+  else if (lower.includes('event') || lower.includes('meeting') || lower.includes('conference') || lower.includes('scheduled') || lower.includes('announcement')) {
+    return 'Event';
+  }
+  
+  // Check for Tasks
+  else if (lower.includes('delay') || lower.includes('shipment') || lower.includes('schedule') || lower.includes('assign') || lower.includes('complete')) {
     return 'Task';
-  } else if (lower.includes('observed') || lower.includes('log')) {
+  }
+  
+  // Check for Incidents
+  else if (lower.includes('incident') || lower.includes('accident') || lower.includes('emergency') || lower.includes('crash') || lower.includes('outage')) {
+    return 'Incident';
+  }
+  
+  // Check for Logs
+  else if (lower.includes('observed') || lower.includes('log') || lower.includes('recorded') || lower.includes('monitored') || lower.includes('reading')) {
     return 'Log';
-  } else {
+  }
+  
+  // Default to Note
+  else {
     return 'Note';
   }
 }
