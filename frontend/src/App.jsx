@@ -104,7 +104,9 @@ function App() {
           <select value={filter.category} onChange={e => setFilter({ ...filter, category: e.target.value })}>
             <option value="">All Categories</option>
             <option value="Issue">Issue</option>
+            <option value="Event">Event</option>
             <option value="Task">Task</option>
+            <option value="Incident">Incident</option>
             <option value="Log">Log</option>
             <option value="Note">Note</option>
           </select>
