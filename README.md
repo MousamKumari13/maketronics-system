@@ -178,9 +178,9 @@ npm run dev
 
 ## Live URLs
 
-- Frontend: [Vercel URL - add after deployment]
-- Backend API: [Railway URL - add after deployment]
+- **Frontend**: [https://maketronics-system.vercel.app/](https://maketronics-system.vercel.app/)
+- **Backend API**: [https://maketronics-system-production.up.railway.app/api](https://maketronics-system-production.up.railway.app/api)
 
 ## GitHub Repository
 
-[GitHub URL - add after creation]
+[https://github.com/MousamKumari13/maketronics-system](https://github.com/MousamKumari13/maketronics-system)
