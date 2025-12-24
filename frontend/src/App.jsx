@@ -6,7 +6,7 @@ import './App.css';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://maketronics-system-production.up.railway.app/api';
 
 function App() {
   const [text, setText] = useState('');
